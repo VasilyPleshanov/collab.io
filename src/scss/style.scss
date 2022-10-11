@@ -5,6 +5,10 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 // ----------------------------------------------------------------------------------
 .wrapper {
   display: flex;
@@ -26,13 +30,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 62px;
   }
 
   &__column {
     display: flex;
+
+    &_last {
+      &.done {
+        @media (max-width: 767.98px) {
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 0px 50px 0px;
+        }
+      }
+    }
   }
 
   &__logo {
+    position: relative;
+    width: 150px;
+    height: 45px;
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    @media (max-width: 767.98px) {
+    }
   }
 
   &__menu {
@@ -40,13 +67,26 @@ body {
 
   &__btn {
     display: none;
+
+    @media (max-width: 991.98px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__burger {
+    @media (max-width: 991.98px) {
+      border: none;
+    }
   }
 
   &__link-basket {
     margin: 0px 26px 0px 0px;
+
+    @media (max-width: 767.98px) {
+      margin: 0px 0px 50px 0px;
+    }
   }
 
   &__basket {
@@ -57,15 +97,46 @@ body {
     background: none;
     border: 1px solid rgba(8, 8, 41, 0.2);
     border-radius: 14px;
+    transition: all 0.3s ease 0s;
+
+    &:hover,
+    :active {
+      color: #fff;
+      background-color: #3f53d8;
+    }
   }
 }
 
 .menu {
-  &__body {
+  @media (max-width: 991.98px) {
+    &._active .menu__body {
+      left: 0;
+    }
   }
+
+  &__body {
+    @media (max-width: 991.98px) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: #fff;
+      transition: left 0.3s ease 0s;
+    }
+  }
+
   &__list {
     display: flex;
-    padding-inline-start: 15.14%;
+    margin: 0;
+    padding-inline-start: 0;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 150px 0px 0px 0px;
+    }
   }
 
   &__item {
@@ -73,6 +144,20 @@ body {
 
     &:not(:last-child) {
       margin: 0px 30px 0px 0px;
+    }
+
+    @media (max-width: 991.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 80px 0px;
+      }
+      margin: 0px 0px 80px 0px;
+    }
+
+    @media (max-width: 767.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 50px 0px;
+      }
+      margin: 0px 0px 50px 0px;
     }
   }
 
@@ -83,133 +168,90 @@ body {
     line-height: 18px;
     letter-spacing: 0.18px;
     text-decoration: none;
+
+    @media (max-width: 991.98px) {
+      font-size: 45px;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 30px;
+    }
   }
 }
 
 // TABLET
 @media (max-width: 991.98px) {
-  .menu {
-    &__body {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: #fff;
-      padding: 150px 0px 0px 0px;
-      transition: left 0.3s ease 0s;
+  .burger {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 35px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    right: 60%;
+
+    @media (max-width: 767.98px) {
+      right: 15px;
     }
 
-    &._active .menu__body {
+    & span,
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
       left: 0;
-    }
-    &__list {
-      flex-direction: column;
-      // align-items: center;
-    }
-
-    &__item {
-      &:not(:last-child) {
-        margin: 0px 0px 80px 0px;
-      }
+      width: 100%;
+      height: 4px;
+      border-radius: 5px;
+      background-color: #3f53d8;
+      transition: all 0.3s ease 0s;
     }
 
-    &__link {
-      font-size: 45px;
+    & span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+
+    &::before {
+      top: 0;
+      transition: top 300ms 300ms,
+        transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &::after {
+      bottom: 0;
+      transition: bottom 300ms 300ms,
+        transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &._active {
+      right: 15px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &._active span {
+      transform: scale(0) translate(0, -50%);
+      transition: transform 400ms cubic-bezier(0.68, -0.55, 0, 1.55);
+    }
+
+    &._active::before {
+      /* 4px height + 11.5px margin-bottom до span*/
+      top: 15.5px;
+      transform: rotate(45deg);
+      transition: top 300ms,
+        transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+    }
+
+    &._active::after {
+      /* 4px height + 11.5px margin-top до span*/
+      bottom: 15.5px;
+      transform: rotate(-45deg);
+      transition: bottom 300ms,
+        transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
     }
   }
 }
-
-//   .header {
-//     &__btn {
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//     }
-//     &__burger {
-//       border: none;
-//     }
-//   }
-
-//   .menu {
-//     position: fixed;
-//     top: 0;
-//     left: -100%;
-//     width: 100%;
-//     height: 100%;
-//     overflow: auto;
-//     background-color: #fff;
-//     padding: 66px 30px 15px 30px;
-//     transition: left 0.3s ease 0s;
-//     &__list {
-//     }
-
-//     &__item {
-//     }
-
-//     &__link {
-//     }
-//   }
-
-// .burger {
-//   position: relative;
-//   display: block;
-//   width: 40px;
-//   height: 40px;
-//   background-color: #fff;
-
-//   & span,
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 5px;
-//     background-color: #3f53d8;
-//     transition: all 0.3s ease 0s;
-//   }
-
-//   & span {
-//     top: 50%;
-//     transform: scale(1) translate(0, -50%);
-//   }
-
-//   &::before {
-//     top: 0;
-//     transition: top 300ms 300ms,
-//       transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-//   }
-
-//   &::after {
-//     bottom: 0;
-//     transition: bottom 300ms 300ms,
-//       transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-//   }
-
-//   &._active span {
-//     transform: scale(0) translate(0, -50%);
-//     transition: transform 400ms cubic-bezier(0.68, -0.55, 0, 1.55);
-//   }
-
-//   &._active::before {
-//     /* 4px height + 14px margin-bottom до span*/
-//     top: 18px;
-//     transform: rotate(45deg);
-//     transition: top 300ms,
-//       transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
-//   }
-
-//   &._active::after {
-//     /* 4px height + 14px margin-top до span*/
-//     bottom: 18px;
-//     transform: rotate(-45deg);
-//     transition: bottom 300ms,
-//       transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
-//   }
-// }
 
 .basket {
   display: flex;
@@ -226,3 +268,5 @@ body {
   &__counter {
   }
 }
+
+// ---------------------------------------------------------------------------
