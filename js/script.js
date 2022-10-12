@@ -17,7 +17,13 @@ function dinamicAdaptive() {
   const parent = document.querySelector('.menu__body');
   const item = document.querySelector('.header__column_last');
 
-  window.addEventListener('resize', function (event) {
+  window.addEventListener('resize', function(event) {
+    resize();
+  })
+
+  resize();
+
+  function resize() {
     const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (viewportWidth < 767) {
       if (!item.classList.contains('done')) {
@@ -30,5 +36,5 @@ function dinamicAdaptive() {
         item.classList.remove('done');
       }
     }
-  })
+  }
 }
