@@ -1,6 +1,8 @@
 adaptiveMenu();
 dinamicAdaptive();
 
+
+
 function adaptiveMenu() {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.menu');
@@ -12,18 +14,21 @@ function adaptiveMenu() {
   })
 }
 
+
+
+
 function dinamicAdaptive() {
   const parentOriginal = document.querySelector('.header__container');
   const parent = document.querySelector('.menu__body');
   const item = document.querySelector('.header__column_last');
 
   window.addEventListener('resize', function(event) {
-    resize();
+    move();
   })
 
-  resize();
+  move();
 
-  function resize() {
+  function move() {
     const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (viewportWidth < 767) {
       if (!item.classList.contains('done')) {
