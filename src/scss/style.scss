@@ -3,6 +3,9 @@
 // ----------------------------------------------------------------------------------
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #080829;
 }
 
 body._lock {
@@ -19,8 +22,8 @@ body._lock {
 
 // -----------------------------------------------------------------------------------
 ._container {
-  max-width: 1326px; // 1296 + 30 отступы безопасности
-  padding: 20px 15px;
+  max-width: 1296px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -31,6 +34,7 @@ body._lock {
     align-items: center;
     justify-content: space-between;
     height: 62px;
+    padding: 20px 15px;
   }
 
   &__column {
@@ -82,7 +86,7 @@ body._lock {
   }
 
   &__link-basket {
-    margin: 0px 26px 0px 0px;
+    margin: 0px 27px 0px 0px;
 
     @media (max-width: 767.98px) {
       margin: 0px 0px 50px 0px;
@@ -93,10 +97,17 @@ body._lock {
   }
 
   &__button {
-    padding: 17px 37px 24px 37px;
+    padding: 17px 37px 24px 38px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #080829;
     background: none;
     border: 1px solid rgba(8, 8, 41, 0.2);
     border-radius: 14px;
+    cursor: pointer;
     transition: all 0.3s ease 0s;
 
     &:hover,
@@ -155,7 +166,7 @@ body._lock {
 
     @media (max-width: 767.98px) {
       &:not(:last-child) {
-        margin: 0px 0px 30px 0px;
+        margin: 0px 0px 40px 0px;
       }
       margin: 0px 0px 50px 0px;
     }
@@ -190,6 +201,7 @@ body._lock {
     transition: all 0.3s ease 0s;
     position: absolute;
     right: 60%;
+    cursor: pointer;
 
     @media (max-width: 767.98px) {
       right: 15px;
@@ -263,11 +275,87 @@ body._lock {
   }
 
   &__text {
-    margin: 0px 8px 0px 0px;
+    margin: 0px 16px 0px 0px;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
   }
 
   &__counter {
+    padding-top: 4px;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    color: #3f53d8;
   }
 }
 
 // ---------------------------------------------------------------------------
+
+.transform {
+  &__container {
+  }
+  &__top {
+    display: flex;
+  }
+  &__column {
+    &_left {
+      max-width: 637px;
+      padding: 124px 0px 0px 47px;
+    }
+  }
+  &__title {
+    display: inline-block;
+    margin: 0px 90px 31px 0px;
+    max-width: 470px;
+    font-weight: 400;
+    font-size: 63px;
+    line-height: 79px;
+    letter-spacing: 2.16px;
+    color: #080829;
+  }
+  &__text {
+    display: inline-block;
+    max-width: 495px;
+    margin: 0px 0px 23px 0px;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.36px;
+    color: #080829;
+  }
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    margin: 0px 34px 0px 0px;
+  }
+  &__btn-image {
+  }
+}
+
+.btn {
+  // display: block;
+  height: 59px;
+  padding: 16px 36px 23px 36px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  background: #3f53d8;
+  border-radius: 14px;
+  border: 1px solid #3f53d8;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
