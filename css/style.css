@@ -50,7 +50,7 @@ body._lock {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 .header__btn {
   display: none;
@@ -105,6 +105,7 @@ body._lock {
     position: fixed;
     top: 0;
     left: -100%;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -176,6 +177,7 @@ body._lock {
     transition: all 0.3s ease 0s;
     position: absolute;
     right: 60%;
+    z-index: 1001;
     cursor: pointer;
   }
 }
@@ -267,9 +269,21 @@ body._lock {
 .transform__top {
   display: flex;
 }
+@media (max-width: 991.98px) {
+  .transform__top {
+    flex-direction: column;
+  }
+}
 .transform__column_left {
   max-width: 637px;
   padding: 124px 0px 0px 47px;
+}
+.transform__column_right {
+  position: relative;
+  max-width: 658px;
+  width: 100%;
+  min-height: 750px;
+  margin: 0 auto;
 }
 .transform__title {
   display: inline-block;
@@ -297,6 +311,57 @@ body._lock {
 .transform__button {
   margin: 0px 34px 0px 0px;
 }
+.transform__avatar-1 {
+  position: absolute;
+  top: 71px;
+  right: 68px;
+  z-index: 2;
+  display: inline-block;
+  right: 10.3%;
+}
+@media (max-width: 1226px) {
+  .transform__avatar-1 {
+    top: 45px;
+  }
+}
+.transform__avatar-2 {
+  position: absolute;
+  top: 205px;
+  left: 10px;
+  z-index: 2;
+  display: inline-block;
+}
+@media (max-width: 1226px) {
+  .transform__avatar-2 {
+    top: 370px;
+  }
+}
+.transform__scree {
+  position: absolute;
+  top: 110px;
+  left: 90px;
+  display: inline-block;
+  left: 13.7%;
+}
+.transform__card {
+  position: absolute;
+  top: 252px;
+  right: 48px;
+  z-index: 2;
+  display: inline-block;
+}
+.transform__manage {
+  position: absolute;
+  top: 538px;
+  left: 10px;
+  display: inline-block;
+}
+@media (max-width: 1226px) {
+  .transform__manage {
+    top: 600px;
+  }
+}
+
 .btn {
   height: 59px;
   padding: 16px 36px 23px 36px;
