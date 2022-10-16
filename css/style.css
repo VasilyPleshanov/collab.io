@@ -278,11 +278,21 @@ body._lock {
   max-width: 637px;
   padding: 124px 0px 0px 47px;
 }
+@media (max-width: 767.98px) {
+  .transform__column_left {
+    padding: 60px 0px 0px 20px;
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__column_left {
+    padding: 40px 0px 0px 20px;
+  }
+}
 .transform__column_right {
   position: relative;
   max-width: 658px;
   width: 100%;
-  min-height: 750px;
+  min-height: 761px;
   margin: 0 auto;
 }
 .transform__title {
@@ -291,9 +301,19 @@ body._lock {
   max-width: 470px;
   font-weight: 400;
   font-size: 63px;
-  line-height: 79px;
+  line-height: 1.27;
   letter-spacing: 2.16px;
   color: #080829;
+}
+@media (max-width: 767.98px) {
+  .transform__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__title {
+    font-size: 32px;
+  }
 }
 .transform__text {
   display: inline-block;
@@ -308,8 +328,23 @@ body._lock {
   display: flex;
   align-items: center;
 }
+@media (max-width: 479.98px) {
+  .transform__btn-wrapper {
+    justify-content: center;
+  }
+}
 .transform__button {
   margin: 0px 34px 0px 0px;
+}
+@media (max-width: 767.98px) {
+  .transform__button {
+    margin: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .transform__btn-image {
+    display: none;
+  }
 }
 .transform__avatar-1 {
   position: absolute;
@@ -324,6 +359,11 @@ body._lock {
     top: 45px;
   }
 }
+@media (max-width: 479.98px) {
+  .transform__avatar-1 {
+    top: 35px;
+  }
+}
 .transform__avatar-2 {
   position: absolute;
   top: 205px;
@@ -333,7 +373,7 @@ body._lock {
 }
 @media (max-width: 1226px) {
   .transform__avatar-2 {
-    top: 370px;
+    top: 380px;
   }
 }
 .transform__scree {
@@ -343,12 +383,31 @@ body._lock {
   display: inline-block;
   left: 13.7%;
 }
+@media (max-width: 767.98px) {
+  .transform__scree img {
+    max-width: 100%;
+  }
+}
 .transform__card {
   position: absolute;
   top: 252px;
   right: 48px;
   z-index: 2;
   display: inline-block;
+}
+@media (max-width: 1296px) {
+  .transform__card {
+    right: 0;
+    left: 55%;
+  }
+  .transform__card img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__card {
+    left: 60%;
+  }
 }
 .transform__manage {
   position: absolute;
@@ -360,6 +419,24 @@ body._lock {
   .transform__manage {
     top: 600px;
   }
+}
+@media (max-width: 767.98px) {
+  .transform__manage img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__manage {
+    top: 480px;
+    right: 20%;
+  }
+}
+.transform__subtitle {
+  margin: 0;
+  text-align: center;
+}
+.transform__item {
+  text-decoration: none;
 }
 
 .btn {

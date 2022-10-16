@@ -307,13 +307,21 @@ body._lock {
     &_left {
       max-width: 637px;
       padding: 124px 0px 0px 47px;
+
+      @media (max-width: 767.98px) {
+        padding: 60px 0px 0px 20px;
+      }
+
+      @media (max-width: 479.98px) {
+        padding: 40px 0px 0px 20px;
+      }
     }
 
     &_right {
       position: relative;
       max-width: 658px;
       width: 100%;
-      min-height: 750px;
+      min-height: 761px;
       margin: 0 auto;
     }
   }
@@ -323,9 +331,18 @@ body._lock {
     max-width: 470px;
     font-weight: 400;
     font-size: 63px;
-    line-height: 79px;
+    // line-height: 79px;
+    line-height: 1.27;
     letter-spacing: 2.16px;
     color: #080829;
+
+    @media (max-width: 767.98px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 479.98px) {
+      font-size: 32px;
+    }
   }
   &__text {
     display: inline-block;
@@ -339,11 +356,22 @@ body._lock {
   &__btn-wrapper {
     display: flex;
     align-items: center;
+
+    @media (max-width: 479.98px) {
+      justify-content: center;
+    }
   }
   &__button {
     margin: 0px 34px 0px 0px;
+
+    @media (max-width: 767.98px) {
+      margin: 0;
+    }
   }
   &__btn-image {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
   }
 
   &__avatar-1 {
@@ -358,6 +386,10 @@ body._lock {
     @media (max-width: 1226px) {
       top: 45px;
     }
+
+    @media (max-width: 479.98px) {
+      top: 35px;
+    }
   }
 
   &__avatar-2 {
@@ -368,7 +400,7 @@ body._lock {
     display: inline-block;
 
     @media (max-width: 1226px) {
-      top: 370px;
+      top: 380px;
     }
   }
 
@@ -379,6 +411,12 @@ body._lock {
     display: inline-block;
 
     left: 13.7%;
+
+    @media (max-width: 767.98px) {
+      & img {
+        max-width: 100%;
+      }
+    }
   }
 
   &__card {
@@ -387,6 +425,20 @@ body._lock {
     right: 48px;
     z-index: 2;
     display: inline-block;
+
+    @media (max-width: 1296px) {
+      right: 0;
+      left: 55%;
+
+      & img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 479.98px) {
+      // left: 40%;
+      left: 60%;
+    }
   }
 
   &__manage {
@@ -398,6 +450,29 @@ body._lock {
     @media (max-width: 1226px) {
       top: 600px;
     }
+
+    @media (max-width: 767.98px) {
+      & img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 479.98px) {
+      top: 480px;
+      right: 20%;
+    }
+  }
+
+  &__bottom {
+  }
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+  }
+  &__list {
+  }
+  &__item {
+    text-decoration: none;
   }
 }
 
