@@ -1,5 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+.transform__manage, .transform__card, .transform__scree, .transform__avatar-2, .transform__avatar-1 {
+  position: absolute;
+  display: inline-block;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
@@ -76,12 +81,11 @@ body._lock {
   }
 }
 .header__button {
-  padding: 17px 37px 24px 38px;
-  font-family: "Plus Jakarta Sans";
   font-size: 18px;
   line-height: 20px;
-  text-align: center;
   letter-spacing: 0.4px;
+  padding: 17px 37px 24px 38px;
+  text-align: center;
   color: #080829;
   background: none;
   border: 1px solid rgba(8, 8, 41, 0.2);
@@ -91,7 +95,7 @@ body._lock {
 }
 .header__button:hover,
 .header__button :active {
-  color: #fff;
+  color: #ffffff;
   background-color: #3f53d8;
 }
 
@@ -109,7 +113,7 @@ body._lock {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: left 0.3s ease 0s;
   }
 }
@@ -149,11 +153,10 @@ body._lock {
   }
 }
 .menu__link {
-  color: #222222;
-  font-weight: 400;
   font-size: 17px;
   line-height: 18px;
   letter-spacing: 0.18px;
+  color: #222222;
   text-decoration: none;
 }
 @media (max-width: 991.98px) {
@@ -173,7 +176,7 @@ body._lock {
     display: block;
     width: 40px;
     height: 35px;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: all 0.3s ease 0s;
     position: absolute;
     right: 60%;
@@ -244,6 +247,7 @@ body._lock {
     transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
   }
 }
+
 .basket {
   display: flex;
   align-items: center;
@@ -253,15 +257,17 @@ body._lock {
   margin: 0px 8px 0px 0px;
 }
 .basket__text {
-  margin: 0px 16px 0px 0px;
   font-size: 17px;
   line-height: 18px;
+  letter-spacing: 0px;
   color: #000000;
+  margin: 0px 16px 0px 0px;
 }
 .basket__counter {
-  padding-top: 4px;
   font-size: 11px;
   line-height: 18px;
+  letter-spacing: 0px;
+  padding-top: 4px;
   text-align: center;
   color: #3f53d8;
 }
@@ -299,7 +305,6 @@ body._lock {
   display: inline-block;
   margin: 0px 90px 31px 0px;
   max-width: 470px;
-  font-weight: 400;
   font-size: 63px;
   line-height: 1.27;
   letter-spacing: 2.16px;
@@ -347,11 +352,8 @@ body._lock {
   }
 }
 .transform__avatar-1 {
-  position: absolute;
   top: 71px;
-  right: 68px;
   z-index: 2;
-  display: inline-block;
   right: 10.3%;
 }
 @media (max-width: 1226px) {
@@ -365,11 +367,9 @@ body._lock {
   }
 }
 .transform__avatar-2 {
-  position: absolute;
   top: 205px;
   left: 10px;
   z-index: 2;
-  display: inline-block;
 }
 @media (max-width: 1226px) {
   .transform__avatar-2 {
@@ -377,10 +377,7 @@ body._lock {
   }
 }
 .transform__scree {
-  position: absolute;
   top: 110px;
-  left: 90px;
-  display: inline-block;
   left: 13.7%;
 }
 @media (max-width: 767.98px) {
@@ -389,11 +386,9 @@ body._lock {
   }
 }
 .transform__card {
-  position: absolute;
   top: 252px;
   right: 48px;
   z-index: 2;
-  display: inline-block;
 }
 @media (max-width: 1296px) {
   .transform__card {
@@ -410,10 +405,8 @@ body._lock {
   }
 }
 .transform__manage {
-  position: absolute;
   top: 538px;
   left: 10px;
-  display: inline-block;
 }
 @media (max-width: 1226px) {
   .transform__manage {
@@ -442,12 +435,10 @@ body._lock {
 .btn {
   height: 59px;
   padding: 16px 36px 23px 36px;
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  text-align: center;
   letter-spacing: 0.4px;
+  text-align: center;
   color: #ffffff;
   background: #3f53d8;
   border-radius: 14px;

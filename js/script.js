@@ -2,7 +2,6 @@ adaptiveMenu();
 dinamicAdaptive();
 
 
-
 function adaptiveMenu() {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.menu');
@@ -13,8 +12,6 @@ function adaptiveMenu() {
     menu.classList.toggle('_active');
   })
 }
-
-
 
 
 function dinamicAdaptive() {
