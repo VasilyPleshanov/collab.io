@@ -5,6 +5,64 @@
   display: inline-block;
 }
 
+.features__list, .transform__list, .menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 56px;
+  letter-spacing: 1.44px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px 0px 28px 0px;
+}
+@media (max-width: 767.98px) {
+  .title {
+    font-size: 36px;
+    line-height: 56px;
+    letter-spacing: 1.44px;
+  }
+}
+@media (max-width: 479.98px) {
+  .title {
+    font-size: 28px;
+    line-height: 56px;
+    letter-spacing: 1.44px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: 0.36px;
+  color: #545479;
+  margin: 0 auto;
+}
+
+.btn {
+  height: 59px;
+  padding: 16px 36px 23px 36px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  background: #3f53d8;
+  border-radius: 14px;
+  border: 1px solid #3f53d8;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.btn:active {
+  transform: scale(0.9);
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
@@ -119,9 +177,6 @@ body._lock {
 }
 .menu__list {
   display: flex;
-  margin: 0;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
 }
 @media (max-width: 991.98px) {
   .menu__list {
@@ -129,9 +184,6 @@ body._lock {
     align-items: center;
     padding: 150px 0px 0px 0px;
   }
-}
-.menu__item {
-  list-style: none;
 }
 .menu__item:not(:last-child) {
   margin: 0px 30px 0px 0px;
@@ -272,12 +324,22 @@ body._lock {
   color: #3f53d8;
 }
 
+.transform {
+  margin-bottom: 50px;
+}
 .transform__top {
   display: flex;
+  min-height: 761px;
+  margin-bottom: 70px;
 }
 @media (max-width: 991.98px) {
   .transform__top {
     flex-direction: column;
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__top {
+    margin-bottom: 30px;
   }
 }
 .transform__column_left {
@@ -300,6 +362,11 @@ body._lock {
   width: 100%;
   min-height: 761px;
   margin: 0 auto;
+}
+@media (max-width: 479.98px) {
+  .transform__column_right {
+    min-height: 640px;
+  }
 }
 .transform__title {
   display: inline-block;
@@ -431,24 +498,72 @@ body._lock {
 .transform__item {
   text-decoration: none;
 }
-
-.btn {
-  height: 59px;
-  padding: 16px 36px 23px 36px;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: 0.4px;
-  text-align: center;
-  color: #ffffff;
-  background: #3f53d8;
-  border-radius: 14px;
-  border: 1px solid #3f53d8;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+.transform__subtitle {
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0.48px;
+  color: #080829;
+  margin-bottom: 24px;
 }
-.btn:hover {
-  transform: scale(1.1);
+.transform__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
 }
-.btn:active {
-  transform: scale(0.9);
+@media (max-width: 1200px) {
+  .transform__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .transform__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width: 479.98px) {
+  .transform__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+.features__container {
+  padding-top: 100px;
+}
+@media (max-width: 767.98px) {
+  .features__container {
+    padding-top: 70px;
+  }
+}
+.features__text {
+  max-width: 554px;
+  margin-bottom: 56px;
+}
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .features__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media (max-width: 479.98px) {
+  .features__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
 }
