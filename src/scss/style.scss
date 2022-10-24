@@ -29,15 +29,15 @@ $color_6: #545479;
 
 // ----------------------------------------------------------------------------------
 .title {
-  @include font(42px, 56px, 1.44px);
+  @include font(42px, 56 / 42 * 100%, 1.44px);
   font-weight: 400;
   text-align: center;
   margin: 0px 0px 28px 0px;
   @media (max-width: 767.98px) {
-    @include font(36px, 56px, 1.44px);
+    @include font(36px, 56 / 42 * 100%, 1.44px);
   }
   @media (max-width: 479.98px) {
-    @include font(28px, 56px, 1.44px);
+    @include font(28px, 56 / 42 * 100%, 1.44px);
   }
 }
 
@@ -50,7 +50,7 @@ $color_6: #545479;
 .btn {
   height: 59px;
   padding: 16px 36px 23px 36px;
-  @include font(18px, 20px, 0.4px);
+  @include font(18px, 20 / 18 * 100%, 0.4px);
   text-align: center;
   color: $color_1;
   background: $color_3;
@@ -153,7 +153,7 @@ body._lock {
   }
 
   &__button {
-    @include font(18px, 20px, 0.4px);
+    @include font(18px, 20 / 18 * 100%, 0.4px);
     padding: 17px 37px 24px 38px;
     text-align: center;
     color: $color_2;
@@ -222,7 +222,7 @@ body._lock {
   }
 
   &__link {
-    @include font(17px, 18px, 0.18px);
+    @include font(17px, 18 / 17 * 100%, 0.18px);
     color: $color_4;
     text-decoration: none;
 
@@ -319,13 +319,13 @@ body._lock {
   }
 
   &__text {
-    @include font(17px, 18px, 0px);
+    @include font(17px, 18 / 17 * 100%, 0px);
     color: $color_5;
     margin: 0px 16px 0px 0px;
   }
 
   &__counter {
-    @include font(11px, 18px, 0px);
+    @include font(11px, 18 / 11 * 100%, 0px);
     padding-top: 4px;
     text-align: center;
     color: $color_3;
@@ -335,7 +335,7 @@ body._lock {
 // ---------------------------------------------------------------------------
 
 .transform {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   &__top {
     display: flex;
     min-height: 761px;
@@ -376,13 +376,13 @@ body._lock {
     display: inline-block;
     margin: 0px 90px 31px 0px;
     max-width: 470px;
-    @include font(63px, 1.27, 2.16px);
+    @include font(63px, 79 / 63 * 100%, 2.16px);
     color: $color_2;
     @media (max-width: 767.98px) {
-      font-size: 40px;
+      @include font(40px, 79 / 63 * 100%, 2.16px);
     }
     @media (max-width: 479.98px) {
-      font-size: 32px;
+      @include font(32px, 79 / 63 * 100%, 2.16px);
     }
   }
 
@@ -390,7 +390,7 @@ body._lock {
     display: inline-block;
     max-width: 495px;
     margin: 0px 0px 23px 0px;
-    @include font(18px, 29px, 0.36px);
+    @include font(18px, 29 / 18 * 100%, 0.36px);
     color: $color_2;
   }
 
@@ -494,10 +494,8 @@ body._lock {
   &__item {
     text-decoration: none;
   }
-  &__bottom {
-  }
   &__subtitle {
-    @include font(22px, 31px, 0.48px);
+    @include font(22px, 31 / 22 * 100%, 0.48px);
     color: $color_2;
     margin-bottom: 24px;
   }
@@ -521,8 +519,6 @@ body._lock {
       grid-template-rows: repeat(6, 1fr);
     }
   }
-  &__item {
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -533,11 +529,10 @@ body._lock {
       padding-top: 70px;
     }
   }
-  &__title {
-  }
   &__text {
     max-width: 554px;
     margin-bottom: 56px;
+    text-align: center;
   }
   &__list {
     @extend %tpl_2;
@@ -546,6 +541,7 @@ body._lock {
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    margin: 0 47px;
     @media (max-width: 767.98px) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
@@ -559,10 +555,35 @@ body._lock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0px;
+    padding: 49px 0px;
+    @media (max-width: 767.98px) {
+      padding: 30px 0px;
+    }
+    @media (max-width: 479.98px) {
+      padding: 15px 0px;
+    }
   }
   &__icon {
+    margin-bottom: 31px;
   }
   &__name {
+    @include font(24px, 34 / 24 * 100%, 0.02px);
+    text-align: center;
+    color: $color_2;
+    margin: 0;
+    @media (max-width: 1280px) {
+      @include font(16px, 34 / 24 * 100%, 0.02px);
+    }
+    @media (max-width: 991.98px) {
+      @include font(14px, 34 / 24 * 100%, 0.02px);
+    }
+    @media (max-width: 767.98px) {
+      @include font(16px, 34 / 24 * 100%, 0.02px);
+    }
+    @media (max-width: 479.98px) {
+      @include font(18px, 34 / 24 * 100%, 0.02px);
+    }
   }
 }
+
+// ---------------------------------------------------------------------------
