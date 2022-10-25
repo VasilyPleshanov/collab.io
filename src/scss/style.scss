@@ -41,14 +41,16 @@ $color_6: #545479;
   }
 }
 
-.text {
+.description {
   @include font(18px, 29px, 0.36px);
   color: $color_6;
-  margin: 0 auto;
+  // margin: 0 auto;
+  text-align: center;
 }
 
 .btn {
-  height: 59px;
+  display: inline-block;
+  // height: 59px;
   padding: 16px 36px 23px 36px;
   @include font(18px, 20 / 18 * 100%, 0.4px);
   text-align: center;
@@ -222,6 +224,14 @@ body._lock {
   }
 
   &__link {
+    // transition: left 0.3s ease 0s;
+    &:hover {
+      background-color: $color_3;
+      color: #ffffff;
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+    }
+
     @include font(17px, 18 / 17 * 100%, 0.18px);
     color: $color_4;
     text-decoration: none;
@@ -333,7 +343,6 @@ body._lock {
 }
 
 // ---------------------------------------------------------------------------
-
 .transform {
   margin-bottom: 45px;
   &__top {
@@ -523,16 +532,17 @@ body._lock {
 
 // ---------------------------------------------------------------------------
 .features {
+  margin-bottom: 180px;
   &__container {
     padding-top: 100px;
     @media (max-width: 767.98px) {
       padding-top: 70px;
     }
   }
-  &__text {
+  &__description {
     max-width: 554px;
+    margin: 0 auto;
     margin-bottom: 56px;
-    text-align: center;
   }
   &__list {
     @extend %tpl_2;
@@ -587,3 +597,74 @@ body._lock {
 }
 
 // ---------------------------------------------------------------------------
+.collaborate {
+  &__container {
+    display: flex;
+    min-height: 585px;
+    @media (max-width: 991.98px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    position: relative;
+    flex: 0 1 63%;
+    min-height: 585px;
+  }
+
+  &__temlate {
+    @extend %tpl_1;
+    left: 5.8%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__invite {
+    @extend %tpl_1;
+    top: 50.5%;
+    left: 40.26%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    flex: 0 1 37%;
+    margin-left: 15px;
+    @media (max-width: 479.98px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    text-align: start;
+    max-width: 403px;
+    @media (max-width: 479.98px) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    max-width: 403px;
+  }
+
+  &__text {
+    @include font(16px, 29px / 16px * 100%, 0.36px);
+    color: $color_2;
+    margin: 0;
+    text-align: start;
+    margin-left: 36px;
+    width: 380px;
+    @media (max-width: 479.98px) {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    @media (max-width: 479.98px) {
+      margin: 0 auto;
+    }
+  }
+}

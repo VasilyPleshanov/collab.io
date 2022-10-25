@@ -1,179 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Collab.io</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Collab.io</title>
-</head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header__container _container">
-        <div class="header__column">
-          <div class="header__logo">
-            <img src="img/logo.svg" alt="">
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container _container">
+          <div class="header__column">
+            <div class="header__logo">
+              <img src="img/logo.svg" alt="" />
+            </div>
+          </div>
+          <div class="header__column">
+            <div class="header__menu menu">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Features</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">About</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Pricing</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Blog</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__btn">
+              <button class="header__burger burger">
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="header__column header__column_last">
+            <a class="header__link-basket">
+              <div href="#" class="header__basket basket">
+                <img src="img/header/basket.svg" alt="" class="basket__icon" />
+                <p class="basket__text">Cart</p>
+                <div class="basket__counter">0</div>
+              </div>
+            </a>
+            <a class="header__button">Sign up for Beta</a>
           </div>
         </div>
-        <div class="header__column">
-          <div class="header__menu menu">
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Features</a>
+      </header>
+      <main class="page">
+        <section class="transform">
+          <div class="transform__container _container">
+            <div class="transform__top">
+              <div class="transform__column transform__column_left">
+                <h1 class="transform__title">
+                  Transform your teamwork with a powerful design tool
+                </h1>
+                <p class="transform__text">
+                  Stop wasting time with clunky, siloed teamwork. Get every
+                  stakeholder on the same page with a design tool that help you
+                  work better, faster.
+                </p>
+                <div class="transform__btn-wrapper">
+                  <a class="transform__button btn">Start your free trial</a>
+                  <img
+                    src="img/transform/arrow.png"
+                    alt="arrow"
+                    class="transform__btn-image"
+                  />
+                </div>
+              </div>
+              <div class="transform__column transform__column_right">
+                <div class="transform__avatar-1">
+                  <img src="img/transform/1.png" alt="" />
+                </div>
+                <div class="transform__avatar-2">
+                  <img src="img/transform/2.png" alt="" />
+                </div>
+                <div class="transform__scree">
+                  <img src="img/transform/3.png" alt="" />
+                </div>
+                <div class="transform__card">
+                  <img src="img/transform/4.png" alt="" />
+                </div>
+                <div class="transform__manage">
+                  <img src="img/transform/5.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="transform__bottom">
+              <p class="transform__subtitle">
+                More than 100,000+ teams are using Collab
+              </p>
+              <ul class="transform__list">
+                <li class="transform__item">
+                  <img src="img/transform/collab/1.svg" alt="" />
                 </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">About</a>
+                <li class="transform__item">
+                  <img src="img/transform/collab/2.svg" alt="" />
                 </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Pricing</a>
+                <li class="transform__item">
+                  <img src="img/transform/collab/3.svg" alt="" />
                 </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Blog</a>
+                <li class="transform__item">
+                  <img src="img/transform/collab/4.svg" alt="" />
                 </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Contact</a>
+                <li class="transform__item">
+                  <img src="img/transform/collab/5.svg" alt="" />
+                </li>
+                <li class="transform__item">
+                  <img src="img/transform/collab/6.svg" alt="" />
                 </li>
               </ul>
-            </nav>
-          </div>
-          <div class="header__btn">
-            <button class="header__burger burger">
-              <span></span>
-            </button>
-          </div>
-        </div>
-        <div class="header__column header__column_last">
-          <a class="header__link-basket">
-            <div href="#" class="header__basket basket">
-              <img src="img/header/basket.svg" alt="" class="basket__icon">
-              <p class="basket__text">Cart</p>
-              <div class="basket__counter">0</div>
-            </div>
-          </a>
-          <button class="header__button">Sign up for Beta</button>
-        </div>
-      </div>
-    </header>
-    <main class="page">
-      <section class="transform">
-        <div class="transform__container _container">
-          <div class="transform__top">
-            <div class="transform__column transform__column_left">
-              <h1 class="transform__title">Transform your teamwork with a powerful design tool</h1>
-              <p class="transform__text">Stop wasting time with clunky, siloed teamwork. Get every stakeholder on the same page with a design tool that help you work better, faster.</p>
-              <div class="transform__btn-wrapper">
-                <button class="transform__button btn">Start your free trial</button>
-                <img src="img/transform/arrow.png" alt="arrow" class="transform__btn-image">
-              </div>
-            </div>
-            <div class="transform__column transform__column_right">
-              <div class="transform__avatar-1">
-                <img src="img/transform/1.png" alt="">
-              </div>
-              <div class="transform__avatar-2">
-                <img src="img/transform/2.png" alt="">
-              </div>
-              <div class="transform__scree">
-                <img src="img/transform/3.png" alt="">
-              </div>
-              <div class="transform__card">
-                <img src="img/transform/4.png" alt="">
-              </div>
-              <div class="transform__manage">
-                <img src="img/transform/5.png" alt="">
-              </div>
             </div>
           </div>
-          <div class="transform__bottom">
-            <p class="transform__subtitle">More than 100,000+ teams are using Collab</p>
-            <ul class="transform__list">
-              <li class="transform__item">
-                <img src="img/transform/collab/1.svg" alt="">
+        </section>
+        <section class="features">
+          <div class="features__container _container">
+            <h2 class="features__title title">Features that get you results</h2>
+            <p class="features__description description">
+              Transform how your teams collaborate. Brainstorm together, develop
+              strategies and build ads that guarantee customers.
+            </p>
+            <ul class="features__list">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-1.svg" alt="" />
+                </div>
+                <p class="features__name">Live Collaboration</p>
               </li>
-              <li class="transform__item">
-                <img src="img/transform/collab/2.svg" alt="">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-2.svg" alt="" />
+                </div>
+                <p class="features__name">1M+ Templates</p>
               </li>
-              <li class="transform__item">
-                <img src="img/transform/collab/3.svg" alt="">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-3.svg" alt="" />
+                </div>
+                <p class="features__name">Searchable Assets</p>
               </li>
-              <li class="transform__item">
-                <img src="img/transform/collab/4.svg" alt="">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-4.svg" alt="" />
+                </div>
+                <p class="features__name">Unlimited Reviewers</p>
               </li>
-              <li class="transform__item">
-                <img src="img/transform/collab/5.svg" alt="">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-5.svg" alt="" />
+                </div>
+                <p class="features__name">Notifications</p>
               </li>
-              <li class="transform__item">
-                <img src="img/transform/collab/6.svg" alt="">
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-6.svg" alt="" />
+                </div>
+                <p class="features__name">Responsive Design</p>
+              </li>
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-7.svg" alt="" />
+                </div>
+                <p class="features__name">Multiple media support</p>
+              </li>
+              <li class="features__item">
+                <div class="features__icon">
+                  <img src="img/features/features-8.svg" alt="" />
+                </div>
+                <p class="features__name">Version history</p>
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-      <section class="features">
-        <div class="features__container _container">
-          <h2 class="features__title title">Features that get you results</h2>
-          <p class="features__text text">Transform how your teams collaborate. Brainstorm together, develop strategies and build ads that guarantee customers.</p>
-          <ul class="features__list">
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-1.svg" alt="">
+        </section>
+        <section class="collaborate">
+          <div class="collaborate__container _container">
+            <div class="collaborate__left">
+              <div class="collaborate__temlate">
+                <img src="img/collaborate/collaborate-1.png" alt="" />
               </div>
-              <p class="features__name">Live Collaboration</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-2.svg" alt="">
+              <div class="collaborate__invite">
+                <img src="img/collaborate/collaborate-2.png" alt="" />
               </div>
-              <p class="features__name">1M+ Templates</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-3.svg" alt="">
-              </div>
-              <p class="features__name">Searchable Assets</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-4.svg" alt="">
-              </div>
-              <p class="features__name">Unlimited Reviewers</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-5.svg" alt="">
-              </div>
-              <p class="features__name">Notifications</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-6.svg" alt="">
-              </div>
-              <p class="features__name">Responsive Design</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-7.svg" alt="">
-              </div>
-              <p class="features__name">Multiple media support</p>
-            </li>
-            <li class="features__item">
-              <div class="features__icon">
-                <img src="img/features/features-8.svg" alt="">
-              </div>
-              <p class="features__name">Version history</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-  </div>
+            </div>
+            <div class="collaborate__right">
+              <h2 class="collaborate__title title">
+                Collaborate and ship designs faster
+              </h2>
+              <p class="collaborate__description description">
+                Work on files together in real-time, and review and get feedback
+                without the back and forth.
+              </p>
+              <p class="collaborate__text">
+                Produce more ads without spending more time
+              </p>
+              <p class="collaborate__text">
+                Get notified about comments and status updates
+              </p>
+              <p class="collaborate__text">
+                Have one single source of truth for all design
+              </p>
+              <a class="collaborate__button btn">Learn More</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
