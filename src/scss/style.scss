@@ -514,6 +514,7 @@ body._lock {
     grid-template-rows: repeat(1, 1fr);
     justify-items: center;
     align-items: center;
+    margin: 0 47px;
     @extend %tpl_2;
     @media (max-width: 1200px) {
       grid-template-columns: repeat(3, 1fr);
@@ -705,29 +706,58 @@ body._lock {
   margin-bottom: 180px;
   &__container {
     display: flex;
-    padding: 0 47px;
+    // padding: 0 47px;
     min-height: 574px;
     @media (max-width: 991.98px) {
       flex-direction: column;
+      align-items: center;
     }
   }
   &__left {
     flex: 0 1 576px;
+    margin-top: 55px;
+    margin-left: 47px;
+    @media (max-width: 991.98px) {
+      flex: 0 1 0px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 479.98px) {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__title {
     max-width: 330px;
     text-align: start;
+    @media (max-width: 991.98px) {
+      max-width: 100%;
+    }
+    @media (max-width: 479.98px) {
+      text-align: center;
+    }
   }
   &__description {
     max-width: 414px;
     text-align: start;
     margin-bottom: 43px;
+    @media (max-width: 991.98px) {
+      text-align: start;
+      max-width: 100%;
+    }
+    @media (max-width: 479.98px) {
+      text-align: center;
+    }
   }
   &__review {
     display: flex;
     max-width: 432px;
     margin-bottom: 49px;
+    @media (max-width: 991.98px) {
+      max-width: 100%;
+    }
   }
   &__avatar {
     margin-right: 24px;
@@ -740,18 +770,26 @@ body._lock {
         margin-bottom: 15px;
       }
     }
+    @media (max-width: 991.98px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__right {
     position: relative;
     flex: 0 1 624px;
+    @media (max-width: 991.98px) {
+      max-width: 624px;
+      width: 100%;
+    }
   }
   &__image-1 {
     @extend %tpl_1;
     top: 12.8%;
     right: 44%;
-    @media (max-width: 991.98px) {
-      right: 35%;
-      left: 25%;
+    @media (max-width: 547px) {
+      top: 7%;
     }
     img {
       width: 100%;
@@ -761,10 +799,6 @@ body._lock {
     @extend %tpl_1;
     top: 0;
     left: 20%;
-    @media (max-width: 991.98px) {
-      // left: 399px;
-      left: 44.4%;
-    }
     img {
       width: 100%;
     }

@@ -522,6 +522,7 @@ body._lock {
   grid-template-rows: repeat(1, 1fr);
   justify-items: center;
   align-items: center;
+  margin: 0 47px;
 }
 @media (max-width: 1200px) {
   .transform__list {
@@ -747,30 +748,72 @@ body._lock {
 }
 .build__container {
   display: flex;
-  padding: 0 47px;
   min-height: 574px;
 }
 @media (max-width: 991.98px) {
   .build__container {
     flex-direction: column;
+    align-items: center;
   }
 }
 .build__left {
   flex: 0 1 576px;
+  margin-top: 55px;
+  margin-left: 47px;
+}
+@media (max-width: 991.98px) {
+  .build__left {
+    flex: 0 1 0px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 479.98px) {
+  .build__left {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .build__title {
   max-width: 330px;
   text-align: start;
+}
+@media (max-width: 991.98px) {
+  .build__title {
+    max-width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .build__title {
+    text-align: center;
+  }
 }
 .build__description {
   max-width: 414px;
   text-align: start;
   margin-bottom: 43px;
 }
+@media (max-width: 991.98px) {
+  .build__description {
+    text-align: start;
+    max-width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .build__description {
+    text-align: center;
+  }
+}
 .build__review {
   display: flex;
   max-width: 432px;
   margin-bottom: 49px;
+}
+@media (max-width: 991.98px) {
+  .build__review {
+    max-width: 100%;
+  }
 }
 .build__avatar {
   margin-right: 24px;
@@ -784,18 +827,30 @@ body._lock {
 .build__text p:not(:last-child) {
   margin-bottom: 15px;
 }
+@media (max-width: 991.98px) {
+  .build__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .build__right {
   position: relative;
   flex: 0 1 624px;
+}
+@media (max-width: 991.98px) {
+  .build__right {
+    max-width: 624px;
+    width: 100%;
+  }
 }
 .build__image-1 {
   top: 12.8%;
   right: 44%;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 547px) {
   .build__image-1 {
-    right: 35%;
-    left: 25%;
+    top: 7%;
   }
 }
 .build__image-1 img {
@@ -804,11 +859,6 @@ body._lock {
 .build__image-2 {
   top: 0;
   left: 20%;
-}
-@media (max-width: 991.98px) {
-  .build__image-2 {
-    left: 44.4%;
-  }
 }
 .build__image-2 img {
   width: 100%;
