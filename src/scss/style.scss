@@ -50,8 +50,8 @@ $color_6: #545479;
 
 .btn {
   display: inline-block;
-  // height: 59px;
-  padding: 16px 36px 23px 36px;
+  // padding: 16px 36px 23px 36px;
+  padding: 15px 38px 24px 38px;
   @include font(18px, 20 / 18 * 100%, 0.4px);
   text-align: center;
   color: $color_1;
@@ -68,6 +68,16 @@ $color_6: #545479;
   &:active {
     transform: scale(0.9);
   }
+}
+
+.circle {
+  @extend %tpl_1;
+  top: 445px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #a259ff;
 }
 
 // ----------------------------------------------------------------------------------
@@ -103,7 +113,7 @@ body._lock {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 62px;
+    height: 61px;
     padding: 20px 15px;
   }
 
@@ -155,8 +165,8 @@ body._lock {
   }
 
   &__button {
-    @include font(18px, 20 / 18 * 100%, 0.4px);
-    padding: 17px 37px 24px 38px;
+    @include font(18px, 20px, 0.4px);
+    padding: 16px 38px 23px;
     text-align: center;
     color: $color_2;
     background: none;
@@ -224,7 +234,6 @@ body._lock {
   }
 
   &__link {
-    // transition: left 0.3s ease 0s;
     &:hover {
       background-color: $color_3;
       color: #ffffff;
@@ -344,10 +353,12 @@ body._lock {
 
 // ---------------------------------------------------------------------------
 .transform {
-  margin-bottom: 45px;
+  margin-bottom: 47px;
+  @media (max-width: 767.98px) {
+    margin-bottom: 0;
+  }
   &__top {
     display: flex;
-    min-height: 761px;
     margin-bottom: 70px;
     @media (max-width: 991.98px) {
       flex-direction: column;
@@ -365,7 +376,7 @@ body._lock {
         padding: 60px 0px 0px 20px;
       }
       @media (max-width: 479.98px) {
-        padding: 40px 0px 0px 20px;
+        padding: 40px 0px 0px 0px;
       }
     }
 
@@ -376,14 +387,14 @@ body._lock {
       min-height: 761px;
       margin: 0 auto;
       @media (max-width: 479.98px) {
-        min-height: 640px;
+        min-height: 780px;
       }
     }
   }
 
   &__title {
     display: inline-block;
-    margin: 0px 90px 31px 0px;
+    margin: 0px 90px 34px 0px;
     max-width: 470px;
     @include font(63px, 79 / 63 * 100%, 2.16px);
     color: $color_2;
@@ -398,14 +409,13 @@ body._lock {
   &__text {
     display: inline-block;
     max-width: 495px;
-    margin: 0px 0px 23px 0px;
+    margin: 0px 0px 22px 0px;
     @include font(18px, 29 / 18 * 100%, 0.36px);
     color: $color_2;
   }
 
   &__btn-wrapper {
     display: flex;
-    align-items: center;
 
     @media (max-width: 479.98px) {
       justify-content: center;
@@ -413,7 +423,7 @@ body._lock {
   }
 
   &__button {
-    margin: 0px 34px 0px 0px;
+    margin: 20px 34px 26px 0px;
 
     @media (max-width: 767.98px) {
       margin: 0;
@@ -427,8 +437,10 @@ body._lock {
   }
 
   &__avatar-1 {
+    height: 90px;
+    width: 90px;
     @extend %tpl_1;
-    top: 71px;
+    top: 70px;
     z-index: 2;
     right: 10.3%;
     @media (max-width: 1226px) {
@@ -440,8 +452,10 @@ body._lock {
   }
 
   &__avatar-2 {
+    height: 90px;
+    width: 90px;
     @extend %tpl_1;
-    top: 205px;
+    top: 204px;
     left: 10px;
     z-index: 2;
     @media (max-width: 1226px) {
@@ -458,11 +472,14 @@ body._lock {
         max-width: 100%;
       }
     }
+    @media (max-width: 479.98px) {
+      left: 7%;
+    }
   }
 
   &__card {
     @extend %tpl_1;
-    top: 252px;
+    top: 251px;
     right: 48px;
     z-index: 2;
     @media (max-width: 1296px) {
@@ -473,13 +490,14 @@ body._lock {
       }
     }
     @media (max-width: 479.98px) {
-      left: 60%;
+      left: 45%;
+      top: 300px;
     }
   }
 
   &__manage {
     @extend %tpl_1;
-    top: 538px;
+    top: 537px;
     left: 10px;
     @media (max-width: 1226px) {
       top: 600px;
@@ -490,8 +508,18 @@ body._lock {
       }
     }
     @media (max-width: 479.98px) {
-      top: 480px;
+      top: 620px;
       right: 20%;
+    }
+  }
+
+  &__circle {
+    @media (max-width: 1226px) {
+      top: 200px;
+    }
+    @media (max-width: 479.98px) {
+      top: 550px;
+      left: 70px;
     }
   }
 
@@ -508,33 +536,42 @@ body._lock {
     color: $color_2;
     margin-bottom: 24px;
   }
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    justify-items: center;
-    align-items: center;
-    margin: 0 47px;
-    @extend %tpl_2;
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-    }
-    @media (max-width: 767.98px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
-    @media (max-width: 479.98px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(6, 1fr);
-    }
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: 0 47px;
+  @extend %tpl_2;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  @media (max-width: 479.98px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  &__item {
+    height: 100px;
   }
 }
 
 // ---------------------------------------------------------------------------
 .features {
-  margin-bottom: 180px;
+  padding-bottom: 100px;
+  // margin-bottom: 180px;
+  // @media (max-width: 767.98px) {
+  //   margin-bottom: 70px;
+  // }
   &__container {
+    // margin-bottom: 100px;
     padding-top: 100px;
     @media (max-width: 767.98px) {
       padding-top: 70px;
@@ -566,7 +603,7 @@ body._lock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 49px 0px;
+    padding: 50px 0px;
     @media (max-width: 767.98px) {
       padding: 30px 0px;
     }
@@ -575,6 +612,7 @@ body._lock {
     }
   }
   &__icon {
+    height: 80px;
     margin-bottom: 31px;
   }
   &__name {
@@ -599,6 +637,7 @@ body._lock {
 
 // ---------------------------------------------------------------------------
 .collaborate {
+  padding-top: 80px;
   margin-bottom: 199px;
   &__container {
     display: flex;
@@ -629,6 +668,9 @@ body._lock {
     img {
       width: 100%;
     }
+  }
+
+  &__background {
   }
 
   &__right {
@@ -706,7 +748,6 @@ body._lock {
   margin-bottom: 180px;
   &__container {
     display: flex;
-    // padding: 0 47px;
     min-height: 574px;
     @media (max-width: 991.98px) {
       flex-direction: column;
