@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
-.build__image-2, .build__image-1, .collaborate__invite, .collaborate__temlate, .transform__manage, .transform__card, .transform__scree, .transform__avatar-2, .transform__avatar-1, .circle {
+.build__image-2, .build__image-1, .collaborate__background, .collaborate__invite, .collaborate__temlate, .transform__manage, .transform__card, .transform__scree, .transform__avatar-2, .transform__avatar-1, .circle {
   position: absolute;
   display: inline-block;
 }
@@ -583,6 +583,11 @@ body._lock {
 .features {
   padding-bottom: 100px;
 }
+@media (max-width: 479.98px) {
+  .features {
+    padding-bottom: 50px;
+  }
+}
 .features__container {
   padding-top: 100px;
 }
@@ -677,6 +682,11 @@ body._lock {
   padding-top: 80px;
   margin-bottom: 199px;
 }
+@media (max-width: 991.98px) {
+  .collaborate {
+    padding-top: 0;
+  }
+}
 .collaborate__container {
   display: flex;
   min-height: 585px;
@@ -688,11 +698,12 @@ body._lock {
 }
 .collaborate__left {
   position: relative;
-  flex: 0 1 63%;
+  flex: 0 1 61.8%;
   min-height: 585px;
 }
 .collaborate__temlate {
   left: 5.8%;
+  z-index: 100;
 }
 .collaborate__temlate img {
   width: 100%;
@@ -700,18 +711,32 @@ body._lock {
 .collaborate__invite {
   top: 50.5%;
   left: 40.26%;
+  z-index: 100;
 }
 .collaborate__invite img {
   width: 100%;
 }
+.collaborate__background {
+  height: 504px;
+  top: 0;
+  left: 11.99%;
+}
+.collaborate__background img {
+  width: 100%;
+}
+.collaborate__circle {
+  top: 180px;
+  left: 82.65%;
+  background-color: #ffc123;
+}
 .collaborate__right {
-  flex: 0 1 473px;
-  margin-left: 15px;
+  flex: 0 1 480px;
+  margin-top: 11px;
+  padding-left: 15px;
 }
 @media (max-width: 991.98px) {
   .collaborate__right {
     min-width: 100%;
-    margin-left: 0;
     margin-bottom: 30px;
   }
 }
@@ -720,6 +745,7 @@ body._lock {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
   }
 }
 .collaborate__title {
@@ -774,7 +800,7 @@ body._lock {
   margin-bottom: 20px;
 }
 .collaborate p:nth-child(5) {
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
 @media (max-width: 479.98px) {
   .collaborate__button {
