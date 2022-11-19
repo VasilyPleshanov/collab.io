@@ -641,6 +641,9 @@ body._lock {
   @media (max-width: 991.98px) {
     padding-top: 0;
   }
+  @media (max-width: 479.98px) {
+    margin-bottom: 50px;
+  }
   &__container {
     display: flex;
     min-height: 585px;
@@ -657,7 +660,7 @@ body._lock {
 
   &__temlate {
     @extend %tpl_1;
-    left: 5.8%;
+    left: 6%;
     z-index: 100;
     img {
       width: 100%;
@@ -666,9 +669,12 @@ body._lock {
 
   &__invite {
     @extend %tpl_1;
-    top: 50.5%;
-    left: 40.26%;
+    top: 293px;
+    left: 41.07%;
     z-index: 100;
+    @media (max-width: 360px) {
+      left: 10%;
+    }
     img {
       width: 100%;
     }
