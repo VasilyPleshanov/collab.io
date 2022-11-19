@@ -640,9 +640,10 @@ body._lock {
   margin-bottom: 199px;
   @media (max-width: 991.98px) {
     padding-top: 0;
+    margin-bottom: 100px;
   }
   @media (max-width: 479.98px) {
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
   &__container {
     display: flex;
@@ -794,6 +795,7 @@ body._lock {
     @media (max-width: 991.98px) {
       flex: 0 1 0px;
       margin-bottom: 50px;
+      margin-left: 15px;
     }
     @media (max-width: 479.98px) {
       margin-left: 0;
