@@ -687,6 +687,11 @@ body._lock {
     padding-top: 0;
   }
 }
+@media (max-width: 479.98px) {
+  .collaborate {
+    margin-bottom: 50px;
+  }
+}
 .collaborate__container {
   display: flex;
   min-height: 585px;
@@ -702,16 +707,21 @@ body._lock {
   min-height: 585px;
 }
 .collaborate__temlate {
-  left: 5.8%;
+  left: 6%;
   z-index: 100;
 }
 .collaborate__temlate img {
   width: 100%;
 }
 .collaborate__invite {
-  top: 50.5%;
-  left: 40.26%;
+  top: 293px;
+  left: 41.07%;
   z-index: 100;
+}
+@media (max-width: 360px) {
+  .collaborate__invite {
+    left: 10%;
+  }
 }
 .collaborate__invite img {
   width: 100%;
