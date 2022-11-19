@@ -685,6 +685,10 @@ body._lock {
     height: 504px;
     top: 0;
     left: 11.99%;
+    @media (max-width: 575px) {
+      top: 100px;
+      left: 0;
+    }
     img {
       width: 100%;
     }
@@ -694,6 +698,10 @@ body._lock {
     top: 180px;
     left: 82.65%;
     background-color: #ffc123ff;
+    @media (max-width: 750px) {
+      top: 480px;
+      left: 15%;
+    }
   }
 
   &__right {

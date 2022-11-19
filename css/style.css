@@ -731,6 +731,12 @@ body._lock {
   top: 0;
   left: 11.99%;
 }
+@media (max-width: 575px) {
+  .collaborate__background {
+    top: 100px;
+    left: 0;
+  }
+}
 .collaborate__background img {
   width: 100%;
 }
@@ -738,6 +744,12 @@ body._lock {
   top: 180px;
   left: 82.65%;
   background-color: #ffc123;
+}
+@media (max-width: 750px) {
+  .collaborate__circle {
+    top: 480px;
+    left: 15%;
+  }
 }
 .collaborate__right {
   flex: 0 1 480px;
