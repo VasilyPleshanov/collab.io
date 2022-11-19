@@ -673,6 +673,7 @@ body._lock {
     left: 41.07%;
     z-index: 100;
     @media (max-width: 360px) {
+      top: 310px;
       left: 10%;
     }
     img {
@@ -789,7 +790,7 @@ body._lock {
   &__left {
     flex: 0 1 576px;
     margin-top: 55px;
-    margin-left: 47px;
+    margin-left: 48px;
     @media (max-width: 991.98px) {
       flex: 0 1 0px;
       margin-bottom: 50px;
@@ -805,6 +806,7 @@ body._lock {
   &__title {
     max-width: 330px;
     text-align: start;
+    margin-bottom: 25px;
     @media (max-width: 991.98px) {
       max-width: 100%;
     }
@@ -827,7 +829,7 @@ body._lock {
   &__review {
     display: flex;
     max-width: 432px;
-    margin-bottom: 49px;
+    margin-bottom: 45px;
     @media (max-width: 991.98px) {
       max-width: 100%;
     }
@@ -851,16 +853,16 @@ body._lock {
   }
   &__right {
     position: relative;
-    flex: 0 1 624px;
+    flex: 0 1 672px;
     @media (max-width: 991.98px) {
-      max-width: 624px;
+      max-width: 672px;
       width: 100%;
     }
   }
   &__image-1 {
     @extend %tpl_1;
-    top: 12.8%;
-    right: 44%;
+    top: 14%;
+    right: 48.06%;
     @media (max-width: 547px) {
       top: 7%;
     }
@@ -871,9 +873,14 @@ body._lock {
   &__image-2 {
     @extend %tpl_1;
     top: 0;
-    left: 20%;
+    left: 18.6%;
     img {
       width: 100%;
     }
+  }
+  &__circle {
+    top: 534px;
+    left: -39.88%;
+    background-color: #ffc123;
   }
 }
