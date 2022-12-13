@@ -1145,18 +1145,32 @@ body._lock {
 
 // ---------------------------------------------------------------------------
 .reviews {
+  margin-bottom: 100px;
 
   &__container {
+    padding-top: 100px;
   }
 
   &__title {
+    max-width: 752px;
+    margin: 0 auto;
     margin-bottom: 80px;
   }
 
   &__body {
+    position: relative;
+    padding: 0 128px;
+    @media (max-width: 991.98px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 767.98px) {
+      padding: 0;
+    }
   }
 
   &__list {
+    list-style-type: none;
+    padding-inline-start: 0;
   }
 
   &__item {
@@ -1166,11 +1180,27 @@ body._lock {
   }
 
   &__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 275px;
+    @media (max-width: 767.98px) {
+      right: 100px;
+    }
+    @media (max-width: 479.98px) {
+      right: 50px;
+    }
   }
 
   &__arrow {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
 
     &_prev {
+      margin-right: 8px;
     }
 
     &_next {
@@ -1180,18 +1210,46 @@ body._lock {
 
 .review {
   display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+
+  // margin: 0 100px;
+  position: relative;
 
   &__quotes {
+    position: absolute;
+    @media (max-width: 767.98px) {
+      img {
+        max-width: 50px;
+      }
+    }
+    @media (max-width: 479.98px) {
+      img {
+        max-width: 30px;
+      }
+    }
 
     &_start {
+      top: 0;
+      left: 0;
     }
 
     &_the-end {
+      right: 0;
+      bottom: 100px;
     }
   }
 
   &__body {
-    margin: 0px 47px;
+    margin: 0px 147px;
+    @media (max-width: 767.98px) {
+      margin: 0px 70px;
+    }
+    @media (max-width: 479.98px) {
+      margin: 0 50px;
+    }
   }
 
   &__rating {
@@ -1218,6 +1276,10 @@ body._lock {
     letter-spacing: 0.64px;
     color: #080829;
     margin-bottom: 34px;
+    @media (max-width: 767.98px) {
+      font-size: 17px;
+      line-height: 22px;
+    }
   }
 
   &__name {
@@ -1230,6 +1292,10 @@ body._lock {
     letter-spacing: 0.48px;
     color: #080829;
     margin-bottom: 40px;
+    @media (max-width: 767.98px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
   }
 
   &__foto {
