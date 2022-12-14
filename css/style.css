@@ -1399,16 +1399,109 @@ body._lock {
   }
 }
 
+.reviews {
+  margin-bottom: 100px;
+}
+.reviews__container {
+  padding-top: 100px;
+}
 .reviews__title {
+  max-width: 752px;
+  margin: 0 auto;
   margin-bottom: 80px;
+}
+.reviews__body {
+  position: relative;
+  padding: 0 128px;
+}
+@media (max-width: 991.98px) {
+  .reviews__body {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .reviews__body {
+    padding: 0;
+  }
+}
+.reviews__list {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.reviews__buttons {
+  position: absolute;
+  bottom: 0;
+  right: 275px;
+}
+@media (max-width: 767.98px) {
+  .reviews__buttons {
+    right: 100px;
+  }
+}
+@media (max-width: 479.98px) {
+  .reviews__buttons {
+    right: 50px;
+  }
+}
+.reviews__arrow {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.reviews__arrow_prev {
+  margin-right: 8px;
 }
 .review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  position: relative;
+}
+.review__quotes {
+  position: absolute;
+}
+@media (max-width: 767.98px) {
+  .review__quotes img {
+    max-width: 50px;
+  }
+}
+@media (max-width: 479.98px) {
+  .review__quotes img {
+    max-width: 30px;
+  }
+}
+.review__quotes_start {
+  top: 0;
+  left: 0;
+}
+.review__quotes_the-end {
+  right: 0;
+  bottom: 100px;
 }
 .review__body {
-  margin: 0px 47px;
+  margin: 0px 147px;
+}
+@media (max-width: 767.98px) {
+  .review__body {
+    margin: 0px 70px;
+  }
+}
+@media (max-width: 479.98px) {
+  .review__body {
+    margin: 0 50px;
+  }
 }
 .review__rating {
   display: -webkit-box;
@@ -1433,6 +1526,12 @@ body._lock {
   color: #080829;
   margin-bottom: 34px;
 }
+@media (max-width: 767.98px) {
+  .review__text {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
 .review__name {
   display: block;
   font-family: "Plus Jakarta Sans";
@@ -1443,4 +1542,10 @@ body._lock {
   letter-spacing: 0.48px;
   color: #080829;
   margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  .review__name {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }
