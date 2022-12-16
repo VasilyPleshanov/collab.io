@@ -1705,3 +1705,11 @@ body._lock {
 .integration__item {
   margin: 40px 80px;
 }
+.integration__item:last-child {
+  display: none;
+}
+@media (max-width: 479.98px) {
+  .integration__item {
+    margin: 30px 45px;
+  }
+}
